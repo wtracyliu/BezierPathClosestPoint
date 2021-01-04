@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
 
     @objc private func handlePan(_ recognizer: UIPanGestureRecognizer) {
-        guard ![UIGestureRecognizerState.ended, .cancelled, .failed].contains(recognizer.state) else {
+        guard ![UIGestureRecognizer.State.ended, .cancelled, .failed].contains(recognizer.state) else {
             lineShapeLayer.path = nil
             startPointShapeLayer.path = nil
             return
